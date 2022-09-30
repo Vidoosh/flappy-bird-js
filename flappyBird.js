@@ -78,7 +78,7 @@ function draw(){
 
         // detect collision
         
-        if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width && (bY <= pipe[i].y + pipeNorth.height || bY + bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height || bY >= csv.length){
+        if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width && (bY <= pipe[i].y + pipeNorth.height || bY + bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height || bY == csv.height || bY == 0){
             location.reload(); // reload the page
         }
         
