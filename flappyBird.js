@@ -22,7 +22,7 @@ var gap = 85;
 var constant;
 
 var bX = 10;
-var bY = 0;
+var bY = 150;
 
 var gravity = 1.5;
 
@@ -78,7 +78,7 @@ function draw(){
 
         // detect collision
         
-        if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width && (bY <= pipe[i].y + pipeNorth.height || bY + bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height){
+        if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width && (bY <= pipe[i].y + pipeNorth.height || bY + bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height || bY >= csv.length){
             location.reload(); // reload the page
         }
         
